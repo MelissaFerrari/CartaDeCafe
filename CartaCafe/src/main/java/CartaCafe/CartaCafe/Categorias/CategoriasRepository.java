@@ -5,6 +5,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 	public interface CategoriasRepository extends JpaRepository<Categorias, Long> {
+
+
+	Categorias getCategoriaById(long id);
+	
 		
 	}
 

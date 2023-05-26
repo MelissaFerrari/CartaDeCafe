@@ -1,6 +1,7 @@
 package CartaCafe.CartaCafe.Categorias;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,13 @@ public class CategoriasService {
 	        return categoriasRepository.findAll();
 	}
  	
+  
+ 	public Categorias getCategoriasByid(Long id) {
+        return this.categoriasRepository.getCategoriaById(id);
+}
+ 	
+			
+
+ 	
 }
 
-	
