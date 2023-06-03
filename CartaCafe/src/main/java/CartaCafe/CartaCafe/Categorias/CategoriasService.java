@@ -22,8 +22,10 @@ public class CategoriasService {
  	public Categorias getCategoriasByid(Long id) {
         return this.categoriasRepository.getCategoriaById(id);
 }
- 	
-			
+
+ 	public Categorias createCategorias(Categorias categorias) {
+         return categoriasRepository.save(categorias);
+    }
 
  	
 }
