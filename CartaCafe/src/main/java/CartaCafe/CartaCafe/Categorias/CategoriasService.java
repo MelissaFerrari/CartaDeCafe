@@ -26,7 +26,33 @@ public class CategoriasService {
  	public Categorias createCategorias(Categorias categorias) {
          return categoriasRepository.save(categorias);
     }
+/*
 
+		 public Categorias updateCategoria(Long id, Categorias categoria) {
+		       Optional<Categorias> optionalCategoria = categoriasRepository.findById(id);
+		        if (optionalCategoria.isPresent()) {
+		            Categorias existingCategoria = new Categorias();
+		            existingCategoria.setNombre(categoria.getNombre());
+		            // Actualizar los demás campos según sea necesario
+
+		            return categoriasRepository.save(existingCategoria);
+		        } else {
+		            return null;
+		        }
+	}*/
+
+
+	public boolean deleteCategoria(Long id){
+		Optional<Categorias> optionalCategoria = categoriasRepository.findById(id);
+	    if (optionalCategoria.isPresent()) {
+	    	categoriasRepository.deleteById(id);
+	        return true;
+	    } else {
+	        return false;
+	        }
+	    }
+
+}	
  	
-}
+
 
